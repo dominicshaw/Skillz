@@ -24,11 +24,11 @@
                     <dragablz:InterTabController />
                 </dragablz:TabablzControl.InterTabController>
 
-<TabItem Header="Highscore">
+                <TabItem Header="Highscore">
 
-    <Skillz:HighscoreControl DataContext="{Binding}" />
+                    <Skillz:HighscoreControl DataContext="{Binding}" />
 
-</TabItem>
+                </TabItem>
 
                 <TabItem Header="Quests">
                     <Label HorizontalAlignment="Center" VerticalAlignment="Center">Material Design</Label>

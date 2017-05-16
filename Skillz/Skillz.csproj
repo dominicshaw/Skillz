@@ -48,6 +48,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -75,6 +76,7 @@
     <Compile Include="Models\SkillTypes.cs" />
     <Compile Include="ViewModel\HighscoreViewModel.cs" />
     <Compile Include="ViewModel\SkillLevelViewModel.cs" />
+    <Compile Include="ViewModel\SkillToImageConverter.cs" />
     <Page Include="HighscoreControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +120,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Agility-icon.png" />
+    <Resource Include="Images\Attack_icon.png" />
+    <Resource Include="Images\Construction-icon.png" />
+    <Resource Include="Images\Cooking-icon.png" />
+    <Resource Include="Images\Crafting-icon.png" />
+    <Resource Include="Images\Defence-icon.png" />
+    <Resource Include="Images\Farming-icon.png" />
+    <Resource Include="Images\Firemaking-icon.png" />
+    <Resource Include="Images\Fishing-icon.png" />
+    <Resource Include="Images\Fletching-icon.png" />
+    <Resource Include="Images\Herblore-icon.png" />
+    <Resource Include="Images\Hitpoints-icon.png" />
+    <Resource Include="Images\Hunter-icon.png" />
+    <Resource Include="Images\Magic-icon.png" />
+    <Resource Include="Images\Mining-icon.png" />
+    <Resource Include="Images\Prayer-icon.png" />
+    <Resource Include="Images\Ranged-icon.png" />
+    <Resource Include="Images\Runecrafting-icon.png" />
+    <Resource Include="Images\Slayer-icon.png" />
+    <Resource Include="Images\Smithing-icon.png" />
+    <Resource Include="Images\Strength-icon.png" />
+    <Resource Include="Images\Thieving-icon.png" />
+    <Resource Include="Images\Woodcutting-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

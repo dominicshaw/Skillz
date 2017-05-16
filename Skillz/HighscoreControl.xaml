@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:viewModel="clr-namespace:Skillz.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="300">
     
@@ -29,6 +30,15 @@
             <DataGrid Margin="5,2" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" ItemsSource="{Binding Skills}" AutoGenerateColumns="False">
 
                 <DataGrid.Columns>
+                    <DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Skill, Converter={viewModel:SkillToImageConverter}}"></Image>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        
+                    </DataGridTemplateColumn>
                     <DataGridTextColumn Binding="{Binding Skill}" Header="Skill" Width="4*" />
                     <DataGridTextColumn Binding="{Binding Rank}" Header="Rank" Width="2*" />
                     <DataGridTextColumn Binding="{Binding Level}" Header="Level" Width="2*" />
