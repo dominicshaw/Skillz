@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModel="clr-namespace:Skillz.ViewModel"
+        xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -13,35 +15,62 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="350" Width="525" d:DataContext="{d:DesignInstance viewModel:HighscoreViewModel}">
-    
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        
-        <TextBlock Grid.Row="0" Text="Username: " VerticalAlignment="Center" />
+        <DockPanel>
 
-        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Username}" VerticalAlignment="Center" />
-        
-        <Button Grid.Row="0" Grid.Column="2" Content="Load" Command="{Binding LoadCommand}"></Button>
-        
-        <DataGrid Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" ItemsSource="{Binding Skills}" AutoGenerateColumns="False">
+            <dragablz:TabablzControl>
+                <dragablz:TabablzControl.InterTabController>
+                    <dragablz:InterTabController />
+                </dragablz:TabablzControl.InterTabController>
 
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Skill}" Header="Type" Width="4*" />
-                <DataGridTextColumn Binding="{Binding Rank}" Header="Type" Width="2*" />
-                <DataGridTextColumn Binding="{Binding Level}" Header="Type" Width="2*" />
-                <DataGridTextColumn Binding="{Binding Xp}" Header="Type" Width="2*" />
-            </DataGrid.Columns>
-            
-        </DataGrid>
-        
+                <TabItem Header="Highscore">
+
+                    <materialDesign:ColorZone Mode="Dark">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Margin="5,2" Grid.Row="0" Text="Username:" VerticalAlignment="Center" />
+
+                            <TextBox Margin="5,2" Grid.Row="0" Grid.Column="1" Text="{Binding Username}" VerticalAlignment="Center" />
+
+                            <Button Margin="5,2" Grid.Row="0" Grid.Column="2" Content="Load" Command="{Binding LoadCommand}"></Button>
+
+                            <DataGrid Margin="5,2" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" ItemsSource="{Binding Skills}" AutoGenerateColumns="False">
+
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Skill}" Header="Skill" Width="4*" />
+                                    <DataGridTextColumn Binding="{Binding Rank}" Header="Rank" Width="2*" />
+                                    <DataGridTextColumn Binding="{Binding Level}" Header="Level" Width="2*" />
+                                    <DataGridTextColumn Binding="{Binding Xp}" Header="Xp" Width="2*" />
+                                </DataGrid.Columns>
+
+                            </DataGrid>
+
+                        </Grid>
+                    </materialDesign:ColorZone>
+
+                </TabItem>
+
+                <TabItem Header="Quests">
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center">Material Design</Label>
+                </TabItem>
+
+                <TabItem Header="Design">
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center">Looks Quite Nice</Label>
+                </TabItem>
+
+            </dragablz:TabablzControl>
+
+        </DockPanel>
     </Grid>
 </Window>
