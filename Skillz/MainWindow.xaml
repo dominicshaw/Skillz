@@ -5,7 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModel="clr-namespace:Skillz.ViewModel"
         mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="350" Width="525" d:DataContext="{d:DesignInstance viewModel:HighscoreViewModel}">
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -18,11 +26,9 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         
-        <TextBlock Grid.Row="0">
-            <Run Text="Username: " />
-        </TextBlock>
-        
-        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Username}" />
+        <TextBlock Grid.Row="0" Text="Username: " VerticalAlignment="Center" />
+
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Username}" VerticalAlignment="Center" />
         
         <Button Grid.Row="0" Grid.Column="2" Content="Load" Command="{Binding LoadCommand}"></Button>
         
