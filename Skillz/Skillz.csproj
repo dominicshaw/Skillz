@@ -66,12 +66,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HighscoreControl.xaml.cs">
+      <DependentUpon>HighscoreControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\CSVLoader.cs" />
     <Compile Include="Models\PlayerStats.cs" />
     <Compile Include="Models\SkillTypes.cs" />
     <Compile Include="ViewModel\HighscoreViewModel.cs" />
     <Compile Include="ViewModel\SkillLevelViewModel.cs" />
+    <Page Include="HighscoreControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
