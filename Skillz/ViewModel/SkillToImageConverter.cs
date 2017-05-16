@@ -2,7 +2,6 @@
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Markup;
-using Skillz.Models;
 
 namespace Skillz.ViewModel
 {
@@ -10,9 +9,7 @@ namespace Skillz.ViewModel
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var attachmentType = (SkillTypes) Enum.Parse(typeof(SkillTypes), value.ToString());
-
-            return string.Format("/Skillz;component/Images/{0}-icon.png", attachmentType);
+            return string.Format("/Skillz;component/Images/{0}-icon.png", value);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

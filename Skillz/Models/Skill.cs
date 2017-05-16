@@ -1,4 +1,6 @@
-﻿namespace Skillz.Models
+﻿using System.Windows.Documents;
+
+namespace Skillz.Models
 {
     public class Skill
     {

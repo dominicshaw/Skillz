@@ -70,6 +70,7 @@
     <Compile Include="HighscoreControl.xaml.cs">
       <DependentUpon>HighscoreControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Quest.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\CSVLoader.cs" />
     <Compile Include="Models\PlayerStats.cs" />
@@ -124,7 +125,7 @@
   <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\Agility-icon.png" />
-    <Resource Include="Images\Attack_icon.png" />
+    <Resource Include="Images\Attack-icon.png" />
     <Resource Include="Images\Construction-icon.png" />
     <Resource Include="Images\Cooking-icon.png" />
     <Resource Include="Images\Crafting-icon.png" />
