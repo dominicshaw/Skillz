@@ -1,13 +1,13 @@
 ﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using GalaSoft.MvvmLight;
 using NanoMVVM.Commands;
+using NanoMVVM.ViewModels;
 using Skillz.Models;
 
 namespace Skillz.ViewModel
 {
-    public class HighscoreViewModel : ViewModelBase
+    public class HighscoreViewModel : BaseViewModel
     {
         private string _user;
         private string _error;

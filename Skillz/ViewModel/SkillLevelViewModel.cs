@@ -1,8 +1,8 @@
-﻿using GalaSoft.MvvmLight;
+﻿using NanoMVVM.ViewModels;
 
 namespace Skillz.ViewModel
 {
-    public class SkillLevelViewModel : ViewModelBase
+    public class SkillLevelViewModel : BaseViewModel
     {
         private string _skill;
         private long _rank;
